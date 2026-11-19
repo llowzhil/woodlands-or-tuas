@@ -335,6 +335,17 @@ function el(tag, props = {}, ...children) {
   return node;
 }
 
+function sideName(side) {
+  if (state[side] === GPS) return "Your location";
+  if (state[side] === CUSTOM) return state.custom?.name ?? "";
+  return PLACES[side][state[side]][0];
+}
+
+function tripEyebrow() {
+  const [from, to] = state.dir === "toJB" ? ["sg", "jb"] : ["jb", "sg"];
+  return el("p", { className: "verdict-eyebrow", textContent: `${sideName(from)} to ${sideName(to)}` });
+}
+
 // Positive when Woodlands is the shorter drive; null without routes.
 function driveGap() {
   if (!state.routes) return null;
@@ -358,6 +369,7 @@ function renderVerdict({ loading, waitingForGps, error }) {
     const retry = el("button", { type: "button", textContent: "Try again" });
     retry.addEventListener("click", updateRoutes);
     box.append(
+      tripEyebrow(),
       el("p", { className: "verdict-head", textContent: "Could not work out the routes" }),
       el("p", { className: "verdict-sub", textContent: `${error}. The cameras below still work.` }),
       retry
@@ -369,6 +381,7 @@ function renderVerdict({ loading, waitingForGps, error }) {
   const gap = Math.abs(diff);
   if (gap < CLOSE_CALL_MIN) {
     box.append(
+      tripEyebrow(),
       el("p", { className: "verdict-head", textContent: "Same drive either way" }),
       el("p", {
         className: "verdict-sub",
@@ -379,7 +392,8 @@ function renderVerdict({ loading, waitingForGps, error }) {
   }
   const [near, far] = diff > 0 ? ["Woodlands", "Tuas"] : ["Tuas", "Woodlands"];
   box.append(
-    el("p", { className: "verdict-head", textContent: `${far} costs you ${gap} min more driving` }),
+    tripEyebrow(),
+    el("p", { className: "verdict-head", textContent: `${far} costs you ${gap} min more driving.` }),
     el("p", {
       className: "verdict-sub",
       textContent: `Take ${near} unless its queue looks at least ${gap} min longer than the queue at ${far}.`,
@@ -433,7 +447,7 @@ function renderCards() {
     const top = el(
       "div",
       { className: "card-top" },
-      el("h2", {}, `${cp.name} `, el("small", { textContent: cp.sub })),
+      el("h3", {}, `${cp.name} `, el("small", { textContent: cp.sub })),
       best === id ? el("span", { className: "badge", textContent: "Shorter drive" }) : null
     );
     const drive = el("p", { className: "drive" });
@@ -554,8 +568,9 @@ function placeItem({ name, meta, note, tag, source, place }) {
   const pick = el(
     "button",
     { type: "button", className: "place-pick" },
+    tag ? el("span", { className: "place-tag", textContent: tag }) : null,
     el("span", { className: "place-name", textContent: name }),
-    el("span", { className: "place-meta" }, tag ? el("span", { className: "place-tag", textContent: tag }) : null, meta),
+    el("span", { className: "place-meta", textContent: meta }),
     note ? el("span", { className: "place-note", textContent: note }) : null
   );
   pick.setAttribute("aria-pressed", String(selected));
