@@ -1,0 +1,393 @@
+:root {
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --text: #1c1b18;
+  --muted: #66625a;
+  --line: #dcd8ce;
+  --accent: #0b6e4f;
+  --accent-soft: #e2f1ea;
+  --warn: #9a5a00;
+  --radius: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141412;
+    --surface: #1f1e1b;
+    --text: #f1eee6;
+    --muted: #a39e92;
+    --line: #35332e;
+    --accent: #5fd0a4;
+    --accent-soft: #17332a;
+    --warn: #e7a94a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  margin: 4px 0 18px;
+  color: var(--muted);
+}
+
+/* Trip form */
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 4px;
+  background: var(--line);
+  border-radius: 12px;
+}
+
+.segmented button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.segmented button[aria-pressed="true"] {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.15);
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+label span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+button:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.status {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: var(--warn);
+}
+
+/* Verdict */
+
+.verdict {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+}
+
+.verdict-head {
+  margin: 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.verdict-sub {
+  margin: 8px 0 0;
+}
+
+.verdict.error {
+  background: var(--surface);
+  border-color: var(--warn);
+}
+
+.verdict button {
+  margin-top: 10px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Checkpoint cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.card {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.card.best {
+  border-color: var(--accent);
+}
+
+.card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.card h2 small {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.drive {
+  margin: 6px 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.drive small {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.maps-link {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 8px 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cams {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cam {
+  margin: 0;
+}
+
+.cam a {
+  display: block;
+}
+
+.cam img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--line);
+}
+
+.cam figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+
+.cam time {
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.cam time.stale {
+  color: var(--warn);
+}
+
+.cam-missing {
+  margin: 10px 0 0;
+  color: var(--warn);
+  font-size: 0.9rem;
+}
+
+/* Where to go */
+
+.where {
+  margin-top: 26px;
+}
+
+.where h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.where h3 {
+  margin: 16px 0 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.where-hint {
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.places {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.place {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.place.selected {
+  border-color: var(--accent);
+}
+
+.place-pick {
+  flex: 1;
+  width: 100%;
+  min-height: 56px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.place-name {
+  display: block;
+  font-weight: 600;
+}
+
+.place-meta,
+.place-note {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.place-note {
+  margin-top: 4px;
+  color: var(--text);
+}
+
+.place-tag {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.place-source {
+  align-self: flex-start;
+  padding: 0 12px 10px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.places-empty {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .verdict-head {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Woodlands or Tuas?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Woodlands or Tuas?</h1>
+        <p class="lede">How much extra driving each checkpoint costs you, next to the live cameras.</p>
+      </header>
+
+      <form id="trip" autocomplete="off">
+        <div class="segmented" role="group" aria-label="Direction">
+          <button type="button" data-dir="toJB" aria-pressed="true">To JB</button>
+          <button type="button" data-dir="toSG" aria-pressed="false">To Singapore</button>
+        </div>
+
+        <div class="fields">
+          <label>
+            <span>Singapore side</span>
+            <select id="sg"></select>
+          </label>
+          <label>
+            <span>JB side</span>
+            <select id="jb"></select>
+          </label>
+        </div>
+        <p id="gps-status" class="status" role="status" hidden></p>
+      </form>
+
+      <section id="verdict" class="verdict" aria-live="polite">
+        <p class="verdict-head">Working out your routes…</p>
+      </section>
+
+      <section class="cards">
+        <article class="card" id="card-woodlands"></article>
+        <article class="card" id="card-tuas"></article>
+      </section>
+
+      <section class="where" aria-labelledby="where-title">
+        <h2 id="where-title">Where to go</h2>
+        <p class="where-hint">Tap a place to make it your JB destination.</p>
+        <h3 id="curated-title">New and on now</h3>
+        <ul id="curated" class="places" aria-labelledby="curated-title"></ul>
+        <h3 id="nearby-title">Nearby</h3>
+        <ul id="nearby" class="places" aria-labelledby="nearby-title"></ul>
+      </section>
+
+      <footer>
+        <p>
+          Drive times assume clear roads and no checkpoint queue. They come from the public OSRM
+          routing server, which receives your start and end points. Cameras are from LTA via
+          data.gov.sg and show the Singapore side only. Nearby places are from OpenStreetMap
+          contributors; the "New and on now" list is checked by hand and may be out of date.
+        </p>
+      </footer>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

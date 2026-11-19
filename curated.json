@@ -1,0 +1,151 @@
+[
+  {
+    "name": "SKS City Mall JBCC",
+    "kind": "place",
+    "category": "Mall",
+    "area": "JB city centre",
+    "note": "New mall under the Sheraton, minutes from the Causeway checkpoint, with more shops opening through 2026.",
+    "lat": 1.4708,
+    "lng": 103.7639,
+    "opened": "2026-05-01",
+    "source": "https://theiskandarian.com/sks-city-mall-jbcc-is-officially-open/"
+  },
+  {
+    "name": "Horizon Mall",
+    "kind": "place",
+    "category": "Mall",
+    "area": "Iskandar Puteri",
+    "note": "Open-air, greenery-heavy lifestyle mall about ten minutes from Legoland; opened with 13 food outlets.",
+    "lat": 1.4463,
+    "lng": 103.6405,
+    "opened": "2026-09-03",
+    "source": "https://eatbook.sg/horizon-mall-johor-bahru/"
+  },
+  {
+    "name": "Sunway Puteri Hills",
+    "kind": "place",
+    "category": "Food destination",
+    "area": "Iskandar Puteri",
+    "note": "Hilltop open-air dining hub with strait views and 13 dining spaces; more outlets due late 2026.",
+    "lat": 1.3807,
+    "lng": 103.6399,
+    "opened": "2026-08-10",
+    "source": "https://www.thestar.com.my/news/nation/2026/08/10/sunway-puteri-hills-launches-as-johor039s-first-elevated-hilltop-dining-hub"
+  },
+  {
+    "name": "Danga Park",
+    "kind": "place",
+    "category": "Attraction",
+    "area": "Danga Bay",
+    "note": "Waterfront park with giant themed playgrounds, water play and night lights; foreigners pay an entry fee.",
+    "lat": 1.4776,
+    "lng": 103.7232,
+    "opened": "2026-05",
+    "source": "https://sethlui.com/new-danga-park-opening-johor-bahru-malaysia-jun-2026/"
+  },
+  {
+    "name": "Kiztopia at Toppen",
+    "kind": "place",
+    "category": "Attraction",
+    "area": "Tebrau",
+    "note": "Singapore-born indoor play and edutainment centre for kids, with obstacle courses and role-play zones.",
+    "lat": 1.5529,
+    "lng": 103.7978,
+    "opened": "2026-02-26",
+    "source": "https://thesun.my/corporate-news/kiztopia-celebrates-grand-opening-of-its-newest-family-edutainment-centre-at-toppen-shopping-mall-johor-bahru/"
+  },
+  {
+    "name": "KIPMall Tampoi (revamped)",
+    "kind": "place",
+    "category": "Mall",
+    "area": "Tampoi",
+    "note": "Older neighbourhood mall that reopened after a major revamp, 15 to 20 minutes from the checkpoint.",
+    "lat": 1.5088,
+    "lng": 103.6872,
+    "opened": "2026-02-08",
+    "source": "https://thesmartlocal.com/read/new-jb-malls/"
+  },
+  {
+    "name": "Guan Heong 1918 at the Red House",
+    "kind": "place",
+    "category": "Food destination",
+    "area": "JB city centre",
+    "note": "Heritage biscuit and pastry shop, paired with a Nanyang cafe, inside the Red House landmark.",
+    "lat": 1.4563,
+    "lng": 103.7634,
+    "opened": "2026-10-11",
+    "source": "https://sethlui.com/new-openings-guide-johor-bahru-malaysia-nov-2026/"
+  },
+  {
+    "name": "Festival Orkid Johor Bahru 2026",
+    "kind": "event",
+    "category": "Festival",
+    "area": "Hutan Bandar, JB",
+    "note": "Five-day city council orchid festival with floral displays, plant collections and gardening activities.",
+    "lat": 1.4831,
+    "lng": 103.7466,
+    "start": "2026-11-19",
+    "end": "2026-11-23",
+    "source": "https://visitjohor2026.my/?p=12132"
+  },
+  {
+    "name": "Johor Furniture Fair",
+    "kind": "event",
+    "category": "Exhibition",
+    "area": "Mid Valley Southkey",
+    "note": "Weekend furniture fair in the Mid Valley Exhibition Centre halls on the mall's third floor.",
+    "lat": 1.501,
+    "lng": 103.7777,
+    "start": "2026-11-20",
+    "end": "2026-11-22",
+    "source": "https://www.midvalleysouthkey.com/whats-on/this-week/"
+  },
+  {
+    "name": "Pet Expo Johor Bahru (Christmas Edition)",
+    "kind": "event",
+    "category": "Exhibition",
+    "area": "Mid Valley Southkey",
+    "note": "Three-day pet products fair, 11am to 9pm, with a small entry fee for adults.",
+    "lat": 1.501,
+    "lng": 103.7777,
+    "start": "2026-11-27",
+    "end": "2026-11-29",
+    "source": "https://www.everydayonsales.com/956681/27-29-november-2026-pet-expo-malaysia-pet-expo-johor-bahru-2026-christmas-sale-promotion-at-mvec-the-mall-mid-valley-southkey-11am-9pm/"
+  },
+  {
+    "name": "Legends Vibe: Live in JB",
+    "kind": "event",
+    "category": "Concert",
+    "area": "Paradigm Mall, Skudai",
+    "note": "Tamil music concert headlined by Suresh Peters, his first Johor Bahru show.",
+    "lat": 1.5162,
+    "lng": 103.6853,
+    "start": "2026-12-05",
+    "end": "2026-12-05",
+    "source": "https://www.bernama.com/en/news.php/?id=2619394"
+  },
+  {
+    "name": "Brick-Tacular Holiday at Legoland",
+    "kind": "event",
+    "category": "Festival",
+    "area": "Iskandar Puteri",
+    "note": "Christmas season in the theme park with festive shows, Santa meet-ups and New Year drone shows.",
+    "lat": 1.4278,
+    "lng": 103.6295,
+    "start": "2026-11-13",
+    "end": "2027-01-03",
+    "source": "https://www.legoland.com.my/explore/shows-entertainment/brick-tacular-holidays/"
+  },
+  {
+    "name": "B.DUCK City Funs",
+    "kind": "event",
+    "category": "Funfair",
+    "area": "AEON Bandar Dato' Onn",
+    "note": "Duck-themed evening funfair in the AEON car park, closed Tuesdays, running until April 2027.",
+    "lat": 1.5636,
+    "lng": 103.7346,
+    "start": null,
+    "end": "2027-04",
+    "source": "https://sethlui.com/new-openings-guide-johor-bahru-malaysia-aug-2026/"
+  }
+]
